@@ -1,4 +1,7 @@
 # KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches
+
+[![Gul'dan_everything](https://github.com/henryzhongsc/longctx_bench/blob/main/visualization/plotted/Gul'dan_everything.png)](https://www.youtube.com/watch?v=TLzhlsEFcVQ&t=55s)
+
 Jiayi Yuan\*, Hongyi Liu\*, Shaochen (Henry) Zhong\*, Yu-Neng Chuang, Songchen Li, Guanchu Wang, Duy Le, Hongye Jin, Vipin Chaudhary, Zhaozhuo Xu, Zirui Liu, Xia Hu
 
 > This is the official implementation of our above-mentioned KV cache compression benchmark paper ([arXiv](https://arxiv.org/abs/2407.01527)). Work corresponds to Shaochen (Henry) Zhong and Zirui Liu.
