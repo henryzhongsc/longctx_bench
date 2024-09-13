@@ -1,0 +1,12 @@
+{
+    "pipeline_params": {
+        "method": "rnn",
+        "model_name": "havenhq/mamba-chat",
+        "tokenizer_name": "havenhq/mamba-chat",
+        "chat_template": "mamba-chat",
+        "model_max_len": 32000,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true
+    }
+}

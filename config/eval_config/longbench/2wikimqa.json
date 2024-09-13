@@ -1,0 +1,20 @@
+{
+    "eval_params": {
+        "dataset": "2wikimqa",
+        "dataset_path": "dataset/longbench",
+        "instruction": "Answer the question based on the given passages. Only give me the answer and do not output any other words.\n\nThe following are given passages.\n{context}\n\nAnswer the question based on the given passages. Only give me the answer and do not output any other words.\n\nQuestion: {input}\nAnswer:",
+        "instruction_position": "prefix",
+        "max_new_tokens": 32,
+        "eval_metrics": [
+            "qa_f1_score"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}

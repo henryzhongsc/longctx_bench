@@ -1,0 +1,20 @@
+{
+    "eval_params": {
+        "dataset": "samsum",
+        "dataset_path": "dataset/longbench",
+        "instruction": "Summarize the dialogue into a few short sentences. The following are some examples.\n\n{context}\n\n{input}",
+        "instruction_position": "prefix",
+        "max_new_tokens": 128,
+        "eval_metrics": [
+            "rouge_score"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}

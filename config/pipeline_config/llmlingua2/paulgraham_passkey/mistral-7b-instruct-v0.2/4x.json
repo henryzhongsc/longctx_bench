@@ -1,0 +1,14 @@
+{
+    "pipeline_params": {
+        "method": "llmlingua",
+        "model_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "tokenizer_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "chat_template": "mistral_instruct",
+        "use_flash_attn": true,
+        "model_max_len": 32000,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "cp_rate": 4
+    }
+}

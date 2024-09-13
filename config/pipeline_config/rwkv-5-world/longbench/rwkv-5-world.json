@@ -1,0 +1,12 @@
+{
+    "pipeline_params": {
+        "method": "rnn",
+        "model_name": "BlinkDL/rwkv-5-world",
+        "tokenizer_name": "BlinkDL/rwkv-5-world",
+        "chat_template": "rwkv",
+        "model_max_len": 3500,
+        "truncation_mode": "middle",
+        "batch_size": 1,
+        "out_of_max_len_allowed": true
+    }
+}

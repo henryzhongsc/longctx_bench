@@ -1,0 +1,20 @@
+{
+    "eval_params": {
+        "dataset": "narrativeqa",
+        "dataset_path": "dataset/longbench",
+        "instruction": "You are given a story, which can be either a novel or a movie script, and a question. Answer the question asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nStory: {context}\n\nNow, answer the question based on the story asconcisely as you can, using a single phrase if possible. Do not provide any explanation.\n\nQuestion: {input}\n\nAnswer:",
+        "instruction_position": "prefix",
+        "max_new_tokens": 128,
+        "eval_metrics": [
+            "qa_f1_score"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}

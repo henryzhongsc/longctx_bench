@@ -1,0 +1,16 @@
+{
+    "pipeline_params": {
+        "method": "h2o_icl",
+        "model_name": "lmsys/longchat-7b-v1.5-32k",
+        "tokenizer_name": "lmsys/longchat-7b-v1.5-32k",
+        "chat_template": "vicuna",
+        "model_max_len": 32000,
+        "use_flash_attn": true,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "rope_theta_factor": 1.0,
+        "heavy_ratio": 0.083,
+        "recent_ratio": 0.083
+    }
+}

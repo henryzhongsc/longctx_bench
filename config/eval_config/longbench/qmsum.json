@@ -1,0 +1,20 @@
+{
+    "eval_params": {
+        "dataset": "qmsum",
+        "dataset_path": "dataset/longbench",
+        "instruction": "You are given a meeting transcript and a query containing a question or instruction. Answer the query in one or more sentences.\n\nTranscript:\n{context}\n\nNow, answer the query based on the above meeting transcript in one or more sentences.\n\nQuery: {input}\nAnswer:",
+        "instruction_position": "prefix",
+        "max_new_tokens": 512,
+        "eval_metrics": [
+            "rouge_score"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}

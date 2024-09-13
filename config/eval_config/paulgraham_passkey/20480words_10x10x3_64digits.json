@@ -1,0 +1,36 @@
+{
+    "eval_params": {
+        "dataset": "passkey_retrieval",
+        "task_desc": "Mohtashami_Jaggi_NeurIPS23_GrassSkySun",
+        "background_dir": "eval/passkey_utils/background/PaulGrahamEssays",
+        "background_filling_style": "ordered_repetition",
+        "background_len_min": 512,
+        "background_len_max": 20480,
+        "n_background_lens": 10,
+        "depth_min": 0,
+        "depth_max": 1,
+        "n_depths": 10,
+        "depth_num_iterations": 3,
+        "max_new_tokens": 256,
+        "instruction": "There is an important info hidden inside a lot of irrelevant text. Find it and memorize it. I will quiz you about the important information there.\n",
+        "instruction_position": "prefix",
+        "retrieval_target_len": 64,
+        "retrieval_target_style": "int",
+        "retrieval_target_template": "The pass key is <PASS KEY>. Remember it. <PASS KEY> is the pass key.",
+        "retrieval_target_placeholder": "<PASS KEY>",
+        "retrieval_target_wrapper": "naked",
+        "retrieval_question": "\nWhat is the pass key? The pass key is ",
+        "eval_metrics": [
+            "exact_match",
+            "partial_match"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}

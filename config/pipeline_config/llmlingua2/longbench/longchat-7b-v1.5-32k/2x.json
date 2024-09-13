@@ -1,0 +1,14 @@
+{
+    "pipeline_params": {
+        "method": "llmlingua",
+        "model_name": "lmsys/longchat-7b-v1.5-32k",
+        "tokenizer_name": "lmsys/longchat-7b-v1.5-32k",
+        "chat_template": "vicuna",
+        "use_flash_attn": true,
+        "model_max_len": 31500,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": false,
+        "cp_rate": 2
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "pipeline_params": {
+        "method": "baseline",
+        "model_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "tokenizer_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "chat_template": "mistral_instruct",
+        "model_max_len": 32000,
+        "use_flash_attn": true,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "rope_theta_factor": 1.0
+    }
+}

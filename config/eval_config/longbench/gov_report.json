@@ -1,0 +1,20 @@
+{
+    "eval_params": {
+        "dataset": "gov_report",
+        "dataset_path": "dataset/longbench",
+        "instruction": "You are given a report by a government agency. Write a one-page summary of the report.\n\nReport:\n{context}\n\nNow, write a one-page summary of the report.\n\nSummary:",
+        "instruction_position": "prefix",
+        "max_new_tokens": 512,
+        "eval_metrics": [
+            "rouge_score"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "pipeline_params": {
+        "method": "h2o_longbench",
+        "model_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "tokenizer_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "chat_template": "mistral_instruct",
+        "model_max_len": 31500,
+        "use_flash_attn": true,
+        "truncation_mode": "middle",
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "rope_theta_factor": 1.0,
+        "heavy_ratio": 0.125,
+        "recent_ratio": 0.125
+    }
+}

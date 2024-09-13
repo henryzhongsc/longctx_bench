@@ -1,0 +1,20 @@
+{
+    "pipeline_params": {
+        "method": "FlexGen",
+        "model_name": "lmsys/longchat-7b-v1.5-32k",
+        "tokenizer_name": "lmsys/longchat-7b-v1.5-32k",
+        "chat_template": "vicuna",
+        "model_max_len": 31500,
+        "use_flash_attn": true,
+        "truncation_mode": "middle",
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "rope_theta_factor": 1.0,
+        "k_bits": 4,
+        "v_bits": 4,
+        "group_size": 32,
+        "residual_length": 0,
+        "k_quant_dim": "token",
+        "v_quant_dim": "token"
+    }
+}

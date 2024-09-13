@@ -1,0 +1,18 @@
+{
+    "pipeline_params": {
+        "method": "KIVI",
+        "model_name": "lmsys/longchat-7b-v1.5-32k",
+        "tokenizer_name": "lmsys/longchat-7b-v1.5-32k",
+        "chat_template": "vicuna",
+        "model_max_len": 32000,
+        "use_flash_attn": true,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "rope_theta_factor": 1.0,
+        "k_bits": 4,
+        "v_bits": 4,
+        "group_size": 32,
+        "residual_length": 128
+    }
+}

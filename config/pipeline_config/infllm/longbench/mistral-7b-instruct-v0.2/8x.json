@@ -1,0 +1,25 @@
+{
+    "pipeline_params": {
+        "method": "inf-llm",
+        "model_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "tokenizer_name": "mistralai/Mistral-7B-Instruct-v0.2",
+        "block_size": 128,
+        "fattn": true,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "topk": 16,
+        "repr_topk": 4,
+        "max_cached_block": 32,
+        "exc_block_size": 512,
+        "base": 1000000,
+        "distance_scale": 1.0,
+        "model_max_len": 31500,
+        "chunk_size": 8192,
+        "chat_template": "mistral_instruct",
+        "compression_ratio": 0.125,
+        "init_ratio": 0.021,
+        "local_ratio": 0.655,
+        "context_ratio": 0.324
+    }
+}

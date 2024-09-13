@@ -1,0 +1,20 @@
+{
+    "eval_params": {
+        "dataset": "trec",
+        "dataset_path": "dataset/longbench",
+        "instruction": "Please determine the type of the question below. Here are some examples of questions.\n\n{context}\n{input}",
+        "instruction_position": "prefix",
+        "max_new_tokens": 64,
+        "eval_metrics": [
+            "classification_score"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}

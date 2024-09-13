@@ -1,0 +1,20 @@
+{
+    "pipeline_params": {
+        "method": "stream-llm",
+        "model_name": "lmsys/longchat-7b-v1.5-32k",
+        "tokenizer_name": "lmsys/longchat-7b-v1.5-32k",
+        "fattn": true,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true,
+        "base": 10000,
+        "distance_scale": 1.0,
+        "rope_linear_scaling_factor": 8.0,
+        "model_max_len": 2147483647,
+        "chunk_size": 8192,
+        "chat_template": "vicuna",
+        "compression_ratio": 0.17,
+        "init_ratio": 0.021,
+        "local_ratio": 0.979
+    }
+}

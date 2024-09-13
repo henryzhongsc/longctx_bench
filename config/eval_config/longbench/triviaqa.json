@@ -1,0 +1,20 @@
+{
+    "eval_params": {
+        "dataset": "triviaqa",
+        "dataset_path": "dataset/longbench",
+        "instruction": "Answer the question based on the given passage. Only give me the answer and do not output any other words. The following are some examples.\n\n{context}\n\n{input}",
+        "instruction_position": "prefix",
+        "max_new_tokens": 32,
+        "eval_metrics": [
+            "qa_f1_score"
+        ]
+    },
+    "management": {
+        "sub_dir": {
+            "input_config": "input_config/",
+            "raw_results": "raw_results.json",
+            "result_vis": "result_vis.png",
+            "output_config": "output_config.json"
+        }
+    }
+}
