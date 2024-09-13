@@ -1,0 +1,20 @@
+{
+    "llama2-7b-chat-4k": 3500,
+    "longchat-7b-v1.5-32k": 31500,
+    "xgen-7b-8k": 7500,
+    "internlm-7b-8k": 7500,
+    "chatglm2-6b": 31500,
+    "chatglm2-6b-32k": 31500,
+    "vicuna-v1.5-7b-16k": 15500,
+    "LLaMA-2-7B-32K": 7500,
+    "llama-7b": 3500,
+    "Llama-2-7b-chat-hf": 3500,
+    "Llama-2-7b-hf": 3500,
+    "llama-13b": 3500,
+    "Llama-2-13b-chat-hf": 3500,
+    "Llama-2-13b-hf": 3500,
+    "falcon-7b": 3500,
+    "Mistral-7B-v0.1": 7500,
+    "Mistral-7B-Instruct-v0.2": 31500,
+    "Meta-Llama-3-8B-Instruct": 7500
+}
