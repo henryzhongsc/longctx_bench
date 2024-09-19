@@ -12,6 +12,7 @@ fsspec==2023.10.0
 packaging==24.1
 wheel==0.44.0
 huggingface-hub==0.22.2
+llmlingua==0.2.2
 fastchat
 
 # mamba-ssm==2.2.2
