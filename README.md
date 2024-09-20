@@ -6,6 +6,15 @@ Jiayi Yuan\*, Hongyi Liu\*, Shaochen (Henry) Zhong\*, Yu-Neng Chuang, Songchen L
 
 > This is the official implementation of our above-mentioned KV cache compression benchmark paper ([arXiv](https://arxiv.org/abs/2407.01527)). Work corresponds to Shaochen (Henry) Zhong and Zirui Liu.
 
+---
+## Changelog and To-do
+
+* `2024/09/19`: Accepted at Findings of EMNLP 2024 (with a 4/5 meta!).
+* `2024/07/01`: v1 arXiv-ed.
+* `2024/06/15`: Initial submission to June ARR 2024.
+
+* [ ] Update v2 to capture new experiment results under the current implementations.
+* [ ] Add covarge of Mamba-2.
 
 ---
 
