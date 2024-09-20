@@ -23,13 +23,14 @@ In this repo, we provide the implementation of all featured methods and evaluati
 
 We provide the minimum environment requirements to support the running of our project. This means there can be a slight difference depending on the actual automatic dependency-solving result of different systems. Given the efficiency focus of our benchmark, some of the featured methods require conflicting environments, causing us unable to provide a single unified environment for all featured methods. Thus, we try to control the version of some of the major packages (`torch`, `transformers`, etc.) and provide two sets of requirements.
 
-* [`requirements/tf_4.36.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.36.txt) supports the three transformer-based baseline models, FlexGen, InfLLM, KIVI, LLMLingua2, and StreamingLLM.
-* [`requirements/tf_4.40.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.40.txt) supports H2O, Mamba, Mamba-Chat, RecurrantGemma, and RWKV-5-World.
+* [`requirements/tf_4.40.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.40.txt) supports the three transformers-based LLM baseline (Llama/Mistral/LongChat), Mamba, Mamba-Chat, RecurrantGemma, RWKV-5-World, FlexGen, StreamingLLM, InfLLM, H2O, and LLMLingua2.
+* [`requirements/tf_4.36.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.36.txt) supports KIVI (it does also run LLM baselines, FlexGen, StreamingLLM, and InfLLM; but we opt to conduct such experiments in the above environment for maximum possible consisitency).
 
 Should one be interested in reproducing a certain method, please look up the corresponding requirement file and install listed packages accordingly.
 
 ```
 cd longctx_bench
+pip install --upgrade pip
 pip install -r requirements/<requirment_file_name>
 ```
 
