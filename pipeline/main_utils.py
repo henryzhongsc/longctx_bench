@@ -24,11 +24,11 @@ def lock_seed(seed):
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--exp_desc', type=str, help='experiment description.')
+    parser.add_argument('--exp_desc', type=str, help='experiment description, this is purely cosmetic for readability purposes.')
     parser.add_argument('--pipeline_config_dir', type=str, help='file path of pipeline config.')
     parser.add_argument('--eval_config_dir', type=str, help='file path of eval config.')
     parser.add_argument('--output_folder_dir', default='', type=str, help='path of output model')
-    parser.add_argument('--job_post_via', default='terminal', type=str, help='slurm_sbatch')    
+    parser.add_argument('--job_post_via', default='slurm_sbatch', type=str, help='slurm_sbatch or terminal')    
     # parser.add_argument("--language_model_path", type=str)
     # parser.add_argument("--tokenizer_name", type=str)
     # parser.add_argument("--context_window", type=int, default=3900)
@@ -114,7 +114,10 @@ def register_args_and_configs(args):
     config['management']['output_folder_dir'] = args.output_folder_dir
     config['management']['job_post_via'] = args.job_post_via
     if config['management']['job_post_via'] == 'slurm_sbatch':     # Add slurm info to config['management'] if the job is triggered via slurm sbatch.
-        config['management']['slurm_info'] = register_slurm_sbatch_info()
+        try:
+            config['management']['slurm_info'] = register_slurm_sbatch_info()
+        except Exception:
+            config['management']['job_post_via'] == 'terminal'      # Likely not a slurm job, rollback to terminal post.
     config['management']['sub_dir'] = eval_config['management']['sub_dir']
 
     return config
