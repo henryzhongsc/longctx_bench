@@ -9,7 +9,7 @@ Jiayi Yuan\*, Hongyi Liu\*, Shaochen (Henry) Zhong\*, Yu-Neng Chuang, Songchen L
 ---
 ## Changelog and To-do
 
-* `2024/09/19`: Accepted at Findings of EMNLP 2024 (with a 4/5 meta!).
+* `2024/09/19`: Accepted at EMNLP 2024 Findings (with a 4/5 meta!).
 * `2024/07/01`: v1 arXiv-ed.
 * `2024/06/15`: Initial submission to June ARR 2024.
 
@@ -20,7 +20,7 @@ Jiayi Yuan\*, Hongyi Liu\*, Shaochen (Henry) Zhong\*, Yu-Neng Chuang, Songchen L
 
 ## Overview
 
-Token evictions, KV cache quantizations, hard prompt compression, RNNs, RNN-Transformer hybrids — plenty of efficiency approaches claim they are long context capable, but which can stand up to comprehensive scrutiny, and what are the trade-offs? Our benchmark paper attempts to answer such questions by evaluating many examplar methods among the above schools against various long context tasks.
+Token evictions, KV cache quantizations, hard prompt compression, RNNs, RNN-Transformer hybrids — plenty of efficiency approaches claim they are long context capable, but which can stand up to comprehensive scrutiny, and what are the trade-offs? Our benchmark paper attempts to answer such questions by evaluating many exemplar methods among the above schools against various long context tasks.
 
 ![cover_vis](https://github.com/henryzhongsc/longctx_bench/blob/main/visualization/plotted/cover_vis.png)
 
@@ -32,8 +32,8 @@ In this repo, we provide the implementation of all featured methods and evaluati
 
 We provide the minimum environment requirements to support the running of our project. This means there can be a slight difference depending on the actual automatic dependency-solving result of different systems. Given the efficiency focus of our benchmark, some of the featured methods require conflicting environments, causing us unable to provide a single unified environment for all featured methods. Thus, we try to control the version of some of the major packages (`torch`, `transformers`, etc.) and provide two sets of requirements.
 
-* [`requirements/tf_4.40.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.40.txt) supports the three transformers-based LLM baseline (Llama/Mistral/LongChat), Mamba, Mamba-Chat, RecurrantGemma, RWKV-5-World, FlexGen, StreamingLLM, InfLLM, H2O, and LLMLingua2.
-* [`requirements/tf_4.36.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.36.txt) supports KIVI (it does also run LLM baselines, FlexGen, StreamingLLM, and InfLLM; but we opt to conduct such experiments in the above environment for maximum possible consisitency).
+* [`requirements/tf_4.40.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.40.txt) supports the three transformers-based LLM baseline (`meta-llama/Meta-Llama-3-8B-Instruct`/`mistralai/Mistral-7B-Instruct-v0.2`/`lmsys/longchat-7b-v1.5-32k`), [Mamba](https://arxiv.org/abs/2312.00752), [Mamba-Chat](https://huggingface.co/havenhq/mamba-chat), [RecurrantGemma](https://storage.googleapis.com/deepmind-media/gemma/recurrentgemma-report.pdf), [RWKV-5-World](https://pypi.org/project/rwkv/), [FlexGen](https://arxiv.org/abs/2303.06865), [StreamingLLM](https://arxiv.org/abs/2309.17453), [InfLLM](https://arxiv.org/abs/2402.04617), [H2O](https://arxiv.org/abs/2306.14048), and [LLMLingua2](https://arxiv.org/abs/2403.12968).
+* [`requirements/tf_4.36.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.36.txt) supports [KIVI](https://arxiv.org/abs/2402.02750) (it does also run LLM baselines, FlexGen, StreamingLLM, and InfLLM; but we opt to conduct such experiments in the above environment for maximum possible consistency).
 
 Should one be interested in reproducing a certain method, please look up the corresponding requirement file and install listed packages accordingly.
 
@@ -130,14 +130,12 @@ Should you want to add a new evaluation, you may consider adding an `eval/<new_e
 
 Should you need to refer to this work or find our codebase useful, please consider citing our work as:
 
+
 ```
-@misc{yuan_liu_zhong_2024_kvcache_comp_benchmnark,
-      title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches},
-      author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu},
-      year={2024},
-      eprint={2407.01527},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2407.01527},
+@inproceedings{yuan_liu_zhong_2024_kvcache_comp_benchmnark,
+    title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches},
+    author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu},
+    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing},
+    year={2024},
 }
 ```
