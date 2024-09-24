@@ -61,7 +61,7 @@ Currently, our benchmark features 15 datasets (NarrativeQA, Qasper, MultiFieldQA
 The needle test's dataset are constructed on the fly, where all necessary material is already supplied in this repo. However, the LongBench datasets would require some extra preparations. We supply the following script to process LongBench:
 
 ```
-python scrips/dataset_prep/download_longbench.py
+python scripts/dataset_prep/download_longbench.py
 ```
 
 Our paper features some models that are gated (e.g., `meta-llama/Meta-Llama-3-8B-Instruct`). So please supply your HuggingFace access token under [`config/access_tokens.py`](https://github.com/henryzhongsc/longctx_bench/blob/main/config/access_tokens.py). You may consider setting `git update-index --assume-unchanged config/access_tokens.py` so that Git will no longer track this file to avoid your locally stored token accidentally get synced to upstream.
