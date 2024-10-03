@@ -1,3 +1,4 @@
+import argparse
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -118,7 +119,7 @@ def list_json_files(root_dir):
                 if pattern in filename:
                     has_pattern = True
             if has_pattern and '.json' in filename:
-                relative_path = os.path.relpath(os.path.join(dirpath, filename), root_dir)
+                relative_path = os.path.join(dirpath, filename)
                 json_files.append(relative_path)
     return json_files
 
