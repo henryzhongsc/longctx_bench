@@ -32,7 +32,7 @@ def initialize_model_tokenizer(pipeline_params):
     return model, tokenizer
 
 
-def batch_generate(batched_input, model, tokenizer, max_new_tokens, **kwargs):
+def batch_generate(batched_input, model, tokenizer, max_new_tokens):
     model.eval()
 
     if isinstance(batched_input[0], str):
@@ -46,7 +46,7 @@ def batch_generate(batched_input, model, tokenizer, max_new_tokens, **kwargs):
         logger.error(f"Unknown batched_input:{batched_input}")
         raise ValueError
 
-    generated_ids = model.generate(inputs, do_sample=False, max_new_tokens=max_new_tokens, **kwargs)
+    generated_ids = model.generate(inputs, do_sample=False, max_new_tokens=max_new_tokens)
     responses = tokenizer.batch_decode(generated_ids[:, input_length:], skip_special_tokens=True)
 
     torch.cuda.empty_cache()
