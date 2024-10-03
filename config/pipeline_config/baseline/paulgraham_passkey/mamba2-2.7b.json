@@ -1,0 +1,13 @@
+{
+    "pipeline_params": {
+        "method": "baseline",
+        "model_name": "state-spaces/mamba2-2.7b",
+        "tokenizer_name": "state-spaces/mamba2-2.7b",
+        "chat_template": null,
+        "model_max_len": 2000,
+        "use_flash_attn": false,
+        "truncation_mode": null,
+        "batch_size": 1,
+        "out_of_max_len_allowed": true
+    }
+}

@@ -17,7 +17,10 @@ def initialize_model_tokenizer(pipeline_params):
     else:
         attn_implementation = 'eager'
 
-    if 'mamba' in pipeline_params['model_name'].lower():
+    if 'mamba2' or 'mamba-codestral' in pipeline_params['model_name'].lower():
+        from transformers import Mamba2Config, Mamba2ForCausalLM
+        model = Mamba2ForCausalLM.from_pretrained(pipeline_params['model_name']).to("cuda")
+    elif 'mamba' in pipeline_params['model_name'].lower():
         from transformers import MambaConfig, MambaForCausalLM
         model = MambaForCausalLM.from_pretrained(pipeline_params['model_name']).to("cuda")
     else:
