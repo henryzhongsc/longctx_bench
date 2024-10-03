@@ -8,6 +8,10 @@ logger = logging.getLogger("main")
 
 # This is the customized building prompt for chat models
 def build_chat(tokenizer, prompt, chat_template):
+
+    if chat_template is None:
+        return prompt
+        
     if "llama3" in chat_template.lower():
         messages = [
             {"role": "user", "content": prompt},
@@ -42,10 +46,8 @@ def build_chat(tokenizer, prompt, chat_template):
                 User: {prompt}
 
                 Assistant:"""
-    elif chat_template is None:
-        return prompt
-
     else:
         logger.error(f"{chat_template} is unsupported.")
         raise NotImplementedError
+
     return prompt
