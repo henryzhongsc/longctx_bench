@@ -48,7 +48,10 @@ def initialize_model_tokenizer(pipeline_params):
         logger.error(f"Unsupported pipeline_params['model_name']: {pipeline_params['model_name']}")
         raise NotImplementedError
 
-    tokenizer = AutoTokenizer.from_pretrained(pipeline_params['tokenizer_name'], padding_side="left")
+    if 'mistral-7b-instruct-v0.2' in pipeline_params['model_name'].lower():
+        tokenizer = AutoTokenizer.from_pretrained(pipeline_params['tokenizer_name'], revision='41b61a33a2483885c981aa79e0df6b32407ed873', padding_side="left")
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(pipeline_params['tokenizer_name'], padding_side="left")
     tokenizer.pad_token = tokenizer.eos_token
     logger.info(f'Model {model} and Tokenizer {tokenizer} initialized.')
     return model, tokenizer
