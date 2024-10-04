@@ -1,0 +1,12 @@
+{
+    "pipeline_params": {
+        "method": "rnn",
+        "model_name": "state-spaces/mamba-2.8b-hf",
+        "tokenizer_name": "EleutherAI/gpt-neox-20b",
+        "chat_template": "mamba2",
+        "model_max_len": 1500,
+        "truncation_mode": "middle",
+        "batch_size": 1,
+        "out_of_max_len_allowed": true
+    }
+}
