@@ -14,7 +14,7 @@ def eval_passkey_retrieval(config):
 
     logger.info(f"Starting evaluation via {pipeline_params['method']}")
 
-    model, tokenizer = inference.initialize_model_tokenizer(pipeline_config=config['pipeline_params'])
+    model, tokenizer = inference.initialize_model_tokenizer(pipeline_params=config['pipeline_params'])
     longest_input = raw_exp_results[-1]['full_input']
 
     # passkey_utils.check_if_out_of_context_window(longest_input=longest_input, model_max_len=config['pipeline_params']['model_max_len'], tokenizer=tokenizer,out_of_max_len_allowed=config['pipeline_params']['out_of_max_len_allowed'])
@@ -27,7 +27,7 @@ def eval_passkey_retrieval(config):
     for i, one_batch in enumerate(batched_raw_exp_results):
         batched_input = [i['full_input'] for i in one_batch]
         # logger.info(f"batched_input: {batched_input}")
-        batched_responses = inference.batch_generate(batched_input=batched_input, model=model, tokenizer=tokenizer, max_new_tokens=config['eval_params']['max_new_tokens'], pipeline_config=pipeline_params)
+        batched_responses = inference.batch_generate(batched_input=batched_input, model=model, tokenizer=tokenizer, max_new_tokens=config['eval_params']['max_new_tokens'])
 
         for one_exp_results, one_response in zip(one_batch, batched_responses):
             one_exp_results['response'] = one_response
