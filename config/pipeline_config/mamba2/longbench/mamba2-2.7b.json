@@ -3,7 +3,7 @@
         "method": "rnn",
         "model_name": "state-spaces/mamba2-2.7b",
         "tokenizer_name": "EleutherAI/gpt-neox-20b",
-        "chat_template": "mamba2",
+        "chat_template": null,
         "model_max_len": 1500,
         "truncation_mode": "middle",
         "batch_size": 1,
