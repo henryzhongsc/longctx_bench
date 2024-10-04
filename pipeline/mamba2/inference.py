@@ -5,11 +5,11 @@ import os.path
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers import  MambaConfig, MambaForCausalLM,AutoTokenizer
+from transformers import MambaConfig, MambaForCausalLM, AutoTokenizer
 from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
 
 def initialize_model_tokenizer(pipeline_config):
-    tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-neox-20b")
+    tokenizer = AutoTokenizer.from_pretrained(pipeline_config['tokenizer_name'])
     model = MambaLMHeadModel.from_pretrained(
         pretrained_model_name=pipeline_config['model_name'],
         dtype=torch.float16,

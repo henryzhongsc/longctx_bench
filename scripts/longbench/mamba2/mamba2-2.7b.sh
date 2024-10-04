@@ -1,7 +1,7 @@
 output_dir_root=$1
 
 task="longbench"
-model="mamba2"
+model="mamba2-2.7b"
 method="mamba2"
 
 for dataset in narrativeqa qasper multifieldqa_en hotpotqa 2wikimqa musique gov_report qmsum multi_news trec triviaqa samsum passage_retrieval_en passage_count lcc repobench-p; do

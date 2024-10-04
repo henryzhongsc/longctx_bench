@@ -3,7 +3,7 @@ output_dir_root=$1
 task="paulgraham_passkey"
 dataset="20480words_1x1x1_7digits"
 model="mamba2-2.7b"
-method="baseline"
+method="mamba2"
 
 python pipeline/${method}/main.py \
 --exp_desc ${task}_${dataset}_${model}_${method} \

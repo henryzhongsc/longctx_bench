@@ -1,7 +1,7 @@
 {
     "pipeline_params": {
         "method": "rnn",
-        "model_name": "state-spaces/mamba-2.8b-hf",
+        "model_name": "state-spaces/mamba2-2.7b",
         "tokenizer_name": "EleutherAI/gpt-neox-20b",
         "chat_template": "mamba-chat",
         "model_max_len": 32000,

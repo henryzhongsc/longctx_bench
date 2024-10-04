@@ -2,7 +2,7 @@ output_dir_root=$1
 
 task="paulgraham_passkey"
 dataset="20480words_10x10x3_7digits"
-model="mamba2"
+model="mamba2-2.7b"
 method="mamba2"
 
 python pipeline/${method}/main.py \
