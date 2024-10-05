@@ -17,10 +17,7 @@ def initialize_model_tokenizer(pipeline_params):
     else:
         attn_implementation = 'eager'
 
-    if 'mamba2' in pipeline_params['model_name'].lower() or 'mamba-codestral' in pipeline_params['model_name'].lower():
-        from transformers import Mamba2Config, Mamba2ForCausalLM
-        model = Mamba2ForCausalLM.from_pretrained(pipeline_params['model_name']).to("cuda")
-    elif 'mamba' in pipeline_params['model_name'].lower():
+    if 'mamba' in pipeline_params['model_name'].lower():
         from transformers import MambaConfig, MambaForCausalLM
         model = MambaForCausalLM.from_pretrained(pipeline_params['model_name']).to("cuda")
     else:
@@ -32,7 +29,7 @@ def initialize_model_tokenizer(pipeline_params):
     return model, tokenizer
 
 
-def batch_generate(batched_input, model, tokenizer, max_new_tokens):
+def batch_generate(batched_input, model, tokenizer, max_new_tokens, **kwargs):
     model.eval()
 
     if isinstance(batched_input[0], str):
@@ -46,7 +43,7 @@ def batch_generate(batched_input, model, tokenizer, max_new_tokens):
         logger.error(f"Unknown batched_input:{batched_input}")
         raise ValueError
 
-    generated_ids = model.generate(inputs, do_sample=False, max_new_tokens=max_new_tokens)
+    generated_ids = model.generate(inputs, do_sample=False, max_new_tokens=max_new_tokens, **kwargs)
     responses = tokenizer.batch_decode(generated_ids[:, input_length:], skip_special_tokens=True)
 
     torch.cuda.empty_cache()

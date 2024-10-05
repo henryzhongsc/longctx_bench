@@ -32,8 +32,16 @@ def get_pred(model, tokenizer, data, device, pipeline_params, eval_params):
 
         input = tokenizer(prompt, truncation=False, return_tensors="pt").to(device)
         context_length = input.input_ids.shape[-1]
+        kwargs = {
+            "eos_token_id" : [tokenizer.eos_token_id]
+        }
+        if eval_params['dataset'] == "samsum": # prevent illegal output on samsum (model endlessly repeat "\nDialogue"), might be a prompting issue
+            kwargs.update({
+                "min_length" : context_length+1,
+                "eos_token_id" : [tokenizer.eos_token_id, tokenizer.encode("\n", add_special_tokens=False)[-1]]
+            })
 
-        pred = inference.batch_generate(input.input_ids, model, tokenizer, eval_params['max_new_tokens'])[0]
+        pred = inference.batch_generate(input.input_ids, model, tokenizer, eval_params['max_new_tokens'], **kwargs)[0]
         preds.append({"pred": pred, "answers": json_obj["answers"], "all_classes": json_obj["all_classes"], "length": json_obj["length"]})
 
     return preds
