@@ -3,7 +3,7 @@
         "method": "baseline",
         "model_name": "lmsys/longchat-7b-v1.5-32k",
         "tokenizer_name": "lmsys/longchat-7b-v1.5-32k",
-        "chat_template": "vicuna",
+        "chat_template": null,
         "model_max_len": 32000,
         "use_flash_attn": true,
         "truncation_mode": null,

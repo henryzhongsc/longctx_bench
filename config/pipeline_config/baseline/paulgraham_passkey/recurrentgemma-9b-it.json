@@ -3,7 +3,7 @@
         "method": "baseline",
         "model_name": "google/recurrentgemma-9b-it",
         "tokenizer_name": "google/recurrentgemma-9b-it",
-        "chat_template": "recurrentgemma",
+        "chat_template": null,
         "model_max_len": 7500,
         "use_flash_attn": false,
         "truncation_mode": null,

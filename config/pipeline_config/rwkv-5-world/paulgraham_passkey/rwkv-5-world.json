@@ -3,7 +3,7 @@
         "method": "rnn",
         "model_name": "BlinkDL/rwkv-5-world",
         "tokenizer_name": "BlinkDL/rwkv-5-world",
-        "chat_template": "rwkv",
+        "chat_template": null,
         "model_max_len": 32000,
         "truncation_mode": null,
         "batch_size": 1,

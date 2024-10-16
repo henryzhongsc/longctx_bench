@@ -3,7 +3,7 @@
         "method": "llmlingua",
         "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
         "tokenizer_name": "meta-llama/Meta-Llama-3-8B-Instruct",
-        "chat_template": "llama3",
+        "chat_template": null,
         "use_flash_attn": true,
         "model_max_len": 32000,
         "truncation_mode": null,

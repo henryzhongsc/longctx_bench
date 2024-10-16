@@ -12,7 +12,7 @@
         "rope_linear_scaling_factor": 8.0,
         "model_max_len": 2147483647,
         "chunk_size": 8192,
-        "chat_template": "vicuna",
+        "chat_template": null,
         "compression_ratio": 0.125,
         "init_ratio": 0.021,
         "local_ratio": 0.979

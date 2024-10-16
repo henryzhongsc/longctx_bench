@@ -16,7 +16,7 @@
         "distance_scale": 1.0,
         "model_max_len": 2147483647,
         "chunk_size": 8192,
-        "chat_template": "llama3",
+        "chat_template": null,
         "rope_theta_factor": 32.0,
         "compression_ratio": 0.125,
         "init_ratio": 0.021,

@@ -16,7 +16,7 @@
         "distance_scale": 1.0,
         "model_max_len": 2147483647,
         "chunk_size": 8192,
-        "chat_template": "mistral_instruct",
+        "chat_template": null,
         "compression_ratio": 0.5,
         "init_ratio": 0.021,
         "local_ratio": 0.655,
