@@ -9,12 +9,15 @@ Jiayi Yuan\*, Hongyi Liu\*, Shaochen (Henry) Zhong\*, Yu-Neng Chuang, Songchen L
 ---
 ## Changelog and To-do
 
+* `2024/10/16`: All experiment logs, filtered, and raw results shared at [Google Drive link](https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link).
+* `2024/10/08`: v2 arXiv-ed.
+  * [x] Update v2 to capture new experiment results under the current implementations.
+  * [x] Add coverage of Mamba-2.
 * `2024/09/19`: Accepted at EMNLP 2024 Findings (with a 4/5 meta!).
 * `2024/07/01`: v1 arXiv-ed.
 * `2024/06/15`: Initial submission to June ARR 2024.
 
-* [ ] Update v2 to capture new experiment results under the current implementations.
-* [ ] Add covarge of Mamba-2.
+
 
 ---
 
@@ -65,7 +68,7 @@ The needle test's dataset are constructed on the fly, where all necessary materi
 python scripts/dataset_prep/download_longbench.py
 ```
 
-Our paper features some models that are gated (e.g., `meta-llama/Meta-Llama-3-8B-Instruct`). So please supply your HuggingFace access token under [`config/access_tokens.py`](https://github.com/henryzhongsc/longctx_bench/blob/main/config/access_tokens.py). You may consider setting `git update-index --assume-unchanged config/access_tokens.py` so that Git will no longer track this file to avoid your locally stored token accidentally get synced to upstream.
+Our paper features some models that are gated (e.g., `meta-llama/Meta-Llama-3-8B-Instruct`). So please supply your HuggingFace access token under [`config/access_tokens.py`](https://github.com/henryzhongsc/longctx_bench/blob/main/config/access_tokens.py). You may consider setting `git update-index --skip-worktree config/access_tokens.py` so that Git will no longer track this file to avoid your locally stored token accidentally get synced to upstream.
 
 ---
 ## Experiment Reproduction
@@ -85,6 +88,7 @@ bash scripts/longbench/kivi/2bit/llama3-8b-instruct.sh <output_dir_root>
 
 > Given the long context tasks are often time-consuming to evaluate, we additionally supply a set of scripts in the [`scripts/quick_start`](https://github.com/henryzhongsc/longctx_bench/blob/main/scripts/quick_start) folder, which are quick to conclude (just Qasper for LongBench and just two of the longest needle inputs for PaulGraham Passkey). They are solely here as proxies to confirm the code and environment are (likely) running fine before committing to longer evaluations. We recommend trying these scripts first.
 
+For viewer's convenience of comparison and potential table/plot construction needs, we share all experiment logs, filtered, and raw results at [Google Drive link](https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link). The exact experiment results we reported can be find under the `result_only` folder, which are calculated base on the raw results shared under `full_output`. All experiments are done with respect to [commit 3e9d810](https://github.com/henryzhongsc/longctx_bench/commit/3e9d810f93cfdecc87d4538e1721d08047d66010).
 
 
 ---
