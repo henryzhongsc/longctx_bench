@@ -298,6 +298,7 @@ class MistralAttention_heavy_hitter(nn.Module):
             else:
                 # activate historical best self.cache_budget - self.recent_budget tokens.
                 # self.previous_scores # (k-Cache - 1)
+                attn_mask[:, :] = 0
                 selected_set = self.previous_scores
 
             if not self.heavy_budget == 0:
@@ -569,6 +570,7 @@ class MistralFlashAttention2_heavy_hitter(MistralAttention_heavy_hitter):
                     attn_mask[:, :-self.recent_budget] = 0
                     selected_set = self.previous_scores[:, :-self.recent_budget]
                 else:
+                    attn_mask[:, :] = 0
                     selected_set = self.previous_scores
 
                 if not self.heavy_budget == 0:
